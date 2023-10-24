@@ -1,17 +1,19 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import * as Yup from 'yup'
 
 import Logo from '../../assets/logo-image.svg'
 import RegisterImg from '../../assets/register-image.svg'
-import { Button } from '../../components'
+import { Button, ErrorMessage } from '../../components'
 import api from '../../services/api'
-import { Container, RegisterImage, ContainerItems, Label, Input, SignInLink, ErrorMessage } from './style'
+import { Container, RegisterImage, ContainerItems, Label, Input, SignInLink } from './style'
 
 export function Register () {
+  const { push } = useHistory()
+
   const schema = Yup.object().shape({
     name: Yup.string().required('Nome obrigatório!'),
     email: Yup.string().email('Digite um e-mail válido').required('E-mail obrigatório!'),
@@ -38,6 +40,10 @@ export function Register () {
 
       if (status === 201 || status === 200) {
         toast.success('Cadastro criado com sucesso')
+
+        setTimeout(() => {
+          push('/login')
+        }, 1000)
       } else if (status === 409) {
         toast.error('E-mail já cadastrado')
       } else {

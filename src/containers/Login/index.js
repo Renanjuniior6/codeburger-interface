@@ -7,10 +7,10 @@ import * as Yup from 'yup'
 
 import LoginImg from '../../assets/login-image.svg'
 import Logo from '../../assets/logo-image.svg'
-import { Button } from '../../components'
+import { Button, ErrorMessage } from '../../components'
 import { useUser } from '../../hooks/UserContext'
 import api from '../../services/api'
-import { Container, LoginImage, ContainerItems, Label, Input, SignInLink, ErrorMessage } from './style'
+import { Container, LoginImage, ContainerItems, Label, Input, SignInLink } from './style'
 
 export function Login () {
   const history = useHistory()
@@ -46,7 +46,11 @@ export function Login () {
     putUserData(data)
 
     setTimeout(() => {
-      history.push('/')
+      if (data.admin) {
+        history.push('/pedidos')
+      } else {
+        history.push('/')
+      }
     }, 1000)
   }
 
