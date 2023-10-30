@@ -24,8 +24,8 @@ function NewProduct () {
       .test('required', 'Carregue um arquivo', value => {
         return value?.length > 0
       })
-      .test('fileSize', 'Carregue um arquivo de até 2mb', value => {
-        return value[0]?.size <= 200000
+      .test('fileSize', 'Carregue um arquivo de até 4mb', value => {
+        return value[0]?.size <= 4000000
       })
       .test('type', 'Carregue apenas arquivos JPEG', value => {
         return (
@@ -55,6 +55,8 @@ function NewProduct () {
     setTimeout(() => {
       push('/listar-produtos')
     }, 2000)
+
+    console.log(productDataFormData)
   }
 
   useEffect(() => {

@@ -51,6 +51,7 @@ export function Register () {
       }
     } catch (err) {
       toast.error('Falha no sistema! Tente novamente')
+      console.log(err)
     }
   }
 
@@ -79,10 +80,10 @@ export function Register () {
       <Input type='password' {...register('confirmPassword')} error={errors.confirmPassword?.message}/>
       <ErrorMessage>{errors.confirmPassword?.message}</ErrorMessage>
 
-      <Button type="submit" style={{ marginTop: '7%', marginBottom: '4%' }} >Sign up</Button>
+      <Button type="submit" style={{ marginTop: '7%', marginBottom: '4%' }} >Cadastrar</Button>
       </form>
 
-      <SignInLink> Já possui conta? <Link style={{ color: 'white' }} to='/login'>Sign in</Link></SignInLink>
+      <SignInLink> Já possui conta? <Link style={{ color: 'white' }} to='/login'>Login</Link></SignInLink>
 
      </ContainerItems>
     </Container>

@@ -24,10 +24,13 @@ gap: 20px;
 export const PageLink = styled.a`
 cursor: pointer;
 text-decoration: none;
+font-family: 'Prompt', sans-serif;
 color: ${props => props.isActive ? '#9758a6' : '#555555'} ;
-font-size: 16px;
+border-bottom: ${props => props.isActive ? '3px solid #9758a6' : 'none'} ;
+padding-bottom: 5px;
+font-size: 1.3rem;
 line-height: 19px;
-font-weight: ${props => props.isActive ? 'bold' : 'normal'} ;
+font-weight: ${props => props.isActive ? '400' : 'normal'} ;
 `
 
 export const Line = styled.div`
@@ -41,16 +44,19 @@ p{
     font-size: 19px;
     line-height: 16px;
     color: #555555;
+    margin-bottom: 9px;
+    font-family: 'Prompt', sans-serif;
 }
 `
 
 export const PageLinkExit = styled.a`
-font-weight: bold;
+font-weight: 500;
 font-size: 16px;
 line-height: 16px;
 display: flex;
 align-items: center;
 cursor: pointer;
+font-family: 'Prompt', sans-serif;
 
 color: #9758a6;
 `

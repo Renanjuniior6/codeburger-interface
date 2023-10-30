@@ -30,10 +30,12 @@ grid-gap: 10px 15px;
 img {
     border-radius: 10px;
     width: 130px;
+    height: 125px;
+    margin-right: 13px
 }
 
 p {
-    font-size: 16px;
+    font-size: 19px;
     color: #000000;
 }
 

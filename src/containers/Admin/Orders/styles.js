@@ -8,6 +8,7 @@ min-height: 100vh;
 
 export const ProductsImg = styled.img`
 width: 60px;
+height: 60px;
 border-radius: 6px;
 `
 

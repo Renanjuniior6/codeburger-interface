@@ -13,13 +13,13 @@ align-items: center;
 `
 
 export const LoginImage = styled.img`
-height: 77%;
+height: 87%;
 `
 
 export const ContainerItems = styled.div`
 background: #373737;
 border-radius: 0 10px 10px 0;
-height: 77%;
+height: 87%;
 padding: 0 4%;
 display: flex;
 flex-direction: column;
@@ -37,6 +37,10 @@ h1 {
     color: #ffffff;
     text-align: center;
     margin-top: 10%;
+}
+
+img {
+    height: 18%;
 }
 `
 

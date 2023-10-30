@@ -43,8 +43,8 @@ export function OffersCarousel () {
               offers && offers.map(product => (
                 <ContainerItems key={product.id}>
                   <Image src={product.url} alt='foto da oferta'/>
-                  <p>{product.name}</p>
-                  <p>{product.formartedPrice}</p>
+                  <p style={{ marginBottom: 10 }}>{product.name}</p>
+                  <p style={{ color: 'red' }}>{product.formatedPrice}</p>
                   <Button onClick={() => {
                     putProductInCart(product)
                     push('/carrinho')

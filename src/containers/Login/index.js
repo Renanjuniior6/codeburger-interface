@@ -30,28 +30,35 @@ export function Login () {
   })
 
   const onSubmit = async (clientData) => {
-    const { data } = await toast.promise(
-      api.post('sessions', {
+    try {
+      const { status, data } = await api.post('sessions', {
         email: clientData.email,
         password: clientData.password
-      }),
-      {
-        pending: 'Verificando seus dados...',
-        success: 'Seja bem vindo(a)',
-        error: 'Verifique seu e-mail e senha!'
-      }
+      },
+      { validateStatus: () => true }
+      )
 
-    )
+      if (status === 201 || status === 200) {
+        toast.success('Login efetuado com sucesso')
 
-    putUserData(data)
+        putUserData(data)
 
-    setTimeout(() => {
-      if (data.admin) {
-        history.push('/pedidos')
+        setTimeout(() => {
+          if (data.admin) {
+            history.push('/pedidos')
+          } else {
+            history.push('/')
+          }
+        }, 1000)
+      } else if (status === 401) {
+        toast.error('Verifique seu e-mail ou senha!')
       } else {
-        history.push('/')
+        throw new Error()
       }
-    }, 1000)
+    } catch (err) {
+      toast.error('Falha no sistema! Tente novamente')
+      console.log(err)
+    }
   }
 
   return (
@@ -71,10 +78,10 @@ export function Login () {
       <Input type='password' {...register('password')} error={errors.password?.message}/>
       <ErrorMessage>{errors.password?.message}</ErrorMessage>
 
-      <Button type="submit" style={{ marginTop: '12%', marginBottom: '7%' }} >Sign in</Button>
+      <Button type="submit" style={{ marginTop: '12%', marginBottom: '7%' }} >Entrar</Button>
       </form>
 
-      <SignInLink> Não possui conta? <Link style={{ color: 'white' }} to='/cadastro'>Sign up</Link></SignInLink>
+      <SignInLink> Não possui conta? <Link style={{ color: 'white' }} to='/cadastro'>Cadastre-se</Link></SignInLink>
 
      </ContainerItems>
     </Container>

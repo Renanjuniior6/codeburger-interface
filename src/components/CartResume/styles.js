@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { Button } from '../Button'
+
 export const Container = styled.div`
 background-color: #ffff;
 padding: 15px;
@@ -8,6 +10,7 @@ border-radius: 10px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+width: 300px;
 
 .container-top {
 display: grid;
@@ -20,22 +23,27 @@ grid-template-areas:
 .title {
     grid-area: title;
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .items {
-    grid-area: items
+    grid-area: items;
+
 }
 
 .items-price {
-    grid-area: items-price
+    grid-area: items-price;
+
 }
 
 .delivery-tax {
-    grid-area: delivery-tax
+    grid-area: delivery-tax;
+    
 }
 
 .delivery-tax-price {
-    grid-area: delivery-tax-price
+    grid-area: delivery-tax-price;
+   
 }
 
 }
@@ -47,4 +55,10 @@ justify-content: space-between;
 font-size: 24px;
 margin-top: 120px;
 }
+`
+
+export const ButtonStyles = styled(Button)`
+width: 100%;
+margin-top: 30px;
+height: 54px;
 `

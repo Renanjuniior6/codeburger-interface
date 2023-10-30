@@ -4,8 +4,7 @@ import { toast } from 'react-toastify'
 import { useCart } from '../../hooks/CartContext'
 import api from '../../services/api'
 import formartCurrency from '../../utils/formartCurrency'
-import { Button } from '../Button'
-import { Container } from './styles'
+import { Container, ButtonStyles } from './styles'
 
 export function CartResume () {
   const [finalPrice, setFinalPrice] = useState(0)
@@ -38,9 +37,9 @@ export function CartResume () {
         <Container>
           <div className='container-top'>
             <h2 className='title'>Resumo do pedido</h2>
-            <p className='items'>Itens</p>
+            <p className='items'>Itens:</p>
             <p className='items-price'>{formartCurrency(finalPrice)}</p>
-            <p className='delivery-tax'>Taxa de entrega</p>
+            <p className='delivery-tax'>Taxa de entrega:</p>
             <p className='delivery-tax-price'>{formartCurrency(deliveryTax)}</p>
           </div>
 
@@ -50,9 +49,9 @@ export function CartResume () {
           </div>
 
         </Container>
-        <Button style={{ width: '100%', marginTop: 30 }} onClick={submitOrder}>
+        <ButtonStyles onClick={submitOrder}>
             Finalizar pedido
-          </Button>
+          </ButtonStyles>
         </div>
   )
 }

@@ -35,6 +35,7 @@ flex-direction: column;
 `
 export const Image = styled.img`
 width: 200px;
+height: 200px;
 border-radius: 10px;
 `
 export const Button = styled(Link)`
@@ -44,7 +45,7 @@ border-radius: 8px;
 
 height: 50px;
 border: none;
-font-weight: bold;
+font-weight: 500;
 font-size: 18px;
 line-height: 100%;
 text-align: center;

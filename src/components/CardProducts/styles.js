@@ -16,7 +16,7 @@ div {
 }
 `
 export const ProductName = styled.p`
-font-size: 16px;
+font-size: 1.2rem;
 line-height: 19px;
 
 color: #000000;
@@ -33,5 +33,6 @@ color: #000000;
 
 export const Img = styled.img`
 width: 150px;
+height: 150px;
 border-radius: 10px;
 `

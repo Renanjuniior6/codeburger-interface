@@ -1,13 +1,15 @@
+import HomeIcon from '@mui/icons-material/Home'
 import LogoutIcon from '@mui/icons-material/Logout'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import { useUser } from '../../hooks/UserContext'
 import listLinks from './menu-list'
-import { Container, ItemContainer, ListLink } from './styles'
+import { Container, ItemContainer, ContainerLogout, ListLink } from './styles'
 
 export function SideMenuAdmin ({ path }) {
   const { logout } = useUser()
+
   return (
         <Container>
           <hr/>
@@ -20,10 +22,16 @@ export function SideMenuAdmin ({ path }) {
           </ItemContainer>
           ))}
           <hr/>
-            <ItemContainer style={{ position: 'fixed', bottom: '30px' }}>
+            <ContainerLogout style={{ position: 'fixed', bottom: '30px' }}>
+              <div className='div-logout'>
               <LogoutIcon style={{ color: '#ffffff' }}/>
               <ListLink to={'/login'} onClick={logout}>Sair</ListLink>
-            </ItemContainer>
+              </div>
+              <div className='div-logout'>
+              <HomeIcon style={{ color: '#ffffff' }}/>
+              <ListLink to={'/'}>Home</ListLink>
+              </div>
+            </ContainerLogout>
         </Container>
   )
 }

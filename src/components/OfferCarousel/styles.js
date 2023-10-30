@@ -34,7 +34,7 @@ display: flex;
 flex-direction: column;
 
 p {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 18px;
     line-height: 120%;
     color: #424242;
@@ -53,7 +53,7 @@ border-radius: 8px;
 
 height: 50px;
 border: none;
-font-weight: bold;
+font-weight: 500;
 font-size: 18px;
 line-height: 100%;
 text-align: center;

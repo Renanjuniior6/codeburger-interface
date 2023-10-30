@@ -24,6 +24,7 @@ padding-left: 20px;
 
 .icon {
     color: #ffffff;
+    cursor: pointer;
 }
 `
 
@@ -33,4 +34,24 @@ line-height: 19px;
 color: #ffffff;
 text-decoration: none;
 margin-left: 8px;
+`
+export const ContainerLogout = styled.div`
+height: 60px;
+flex-direction: column;
+align-items: center;
+background: ${props => props.isActive ? '#565656' : 'none'};
+border-radius: 2px;
+margin: 8px;
+padding-left: 20px;
+
+.icon {
+    color: #ffffff;
+}
+
+.div-logout {
+   display: flex ;
+   justify-content: start;
+   align-items: center;
+   margin-bottom: 15px;
+}
 `
