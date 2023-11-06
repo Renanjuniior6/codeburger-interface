@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Carousel from 'react-elastic-carousel'
 import { useHistory } from 'react-router-dom'
 
-import Offers from '../../assets/offers-logo-image.svg'
 import { useCart } from '../../hooks/CartContext'
 import api from '../../services/api'
 import formartCurrency from '../../utils/formartCurrency'
-import { Container, CategoryImg, ContainerItems, Image, Button } from './styles'
+import { Container, OffersH1, ContainerItems, Image, Button } from './styles'
 
 export function OffersCarousel () {
   const [offers, setOffers] = useState([])
@@ -28,7 +27,7 @@ export function OffersCarousel () {
   }, [])
 
   const breakPoints = [
-    { width: 1, itemsToShow: 1 },
+    { width: 1, itemsToShow: 2 },
     { width: 400, itemsToShow: 2 },
     { width: 600, itemsToShow: 3 },
     { width: 900, itemsToShow: 4 },
@@ -36,7 +35,7 @@ export function OffersCarousel () {
   ]
   return (
         <Container>
-          <CategoryImg src={Offers} alt='logo de ofertas'/>
+          <OffersH1>OFERTAS</OffersH1>
 
           <Carousel itemsToShow={4} style={{ width: '90%' }} breakPoints={breakPoints}>
             {

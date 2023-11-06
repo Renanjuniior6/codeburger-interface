@@ -15,4 +15,12 @@ display: flex;
 justify-content: space-evenly;
 margin-top: 30px;
 padding-bottom: 30px;
+
+@media screen and (max-width: 600px) {
+display: flex;
+margin-top: 2%;
+margin-left: 2%;
+flex-direction: column;
+gap: 20px;
+}
 `

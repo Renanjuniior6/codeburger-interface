@@ -13,12 +13,21 @@ justify-content: space-around;
 export const ContainerLeft = styled.div`
 display: flex;
 gap: 30px;
+
+
+@media screen and (max-width: 600px) {
+    gap: 12%;
+}
 `
 
 export const ContainerRight = styled.div`
 display: flex;
 align-items: center;
 gap: 20px;
+
+@media screen and (max-width: 600px) {
+    gap: 11%;
+}
 `
 
 export const PageLink = styled.a`
@@ -46,6 +55,10 @@ p{
     color: #555555;
     margin-bottom: 9px;
     font-family: 'Prompt', sans-serif;
+
+    @media screen and (max-width: 600px) {
+    font-size: 1.1rem;
+    }
 }
 `
 
@@ -59,4 +72,8 @@ cursor: pointer;
 font-family: 'Prompt', sans-serif;
 
 color: #9758a6;
+
+@media screen and (max-width: 600px) {
+    font-size: 1rem
+}
 `

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import CartLogo from '../../assets/home-image-3.svg'
-import { CartItems, CartResume } from '../../components'
+import { CartItems, CartResume, OffersCarousel, Footer } from '../../components'
 import { Container, CartImg, Wrapper } from './styles'
 
 export function Cart () {
@@ -12,6 +12,8 @@ export function Cart () {
            <CartItems />
            <CartResume />
            </Wrapper>
+           <OffersCarousel />
+           <Footer />
         </Container>
   )
 }

@@ -1,54 +1,81 @@
 import { yupResolver } from '@hookform/resolvers/yup'
-import React from 'react'
+import UploadFileIcon from '@mui/icons-material/UploadFile'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useHistory } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import * as Yup from 'yup'
 
 import { ErrorMessage } from '../../../components/ErrorMessage'
 import api from '../../../services/api'
-import { Container, Label, Input, ButtonStyles } from './styles'
+import { Container, ButtonStyles, LabelUpload, Label, Input } from './styles'
 
 function NewCategory () {
-  const { push } = useHistory()
+  const [fileName, setFileName] = useState(null)
 
   const schema = Yup.object().shape({
-    category: Yup.string().required('Escolha o nome da categoria')
+    name: Yup.string().required('Este campo é obrigatório'),
+    file: Yup.mixed()
+      .test('required', 'Carregue uma imagem', value => {
+        return value?.length > 0
+      })
+      .test('fileSize', 'Carregue uma imagem de até 2mb', value => {
+        return value[0]?.size <= 2000000
+      })
   })
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
     resolver: yupResolver(schema)
   })
-
   const onSubmit = async data => {
-    const productDataFormData = new FormData()
+    const categoryDataFormData = new FormData()
 
-    productDataFormData.append('category', data.category.name)
+    categoryDataFormData.append('name', data.name)
+    categoryDataFormData.append('file', data.file[0])
 
-    await toast.promise(api.post('categories', productDataFormData), {
-      pending: 'Criando o produto',
-      success: 'Criado com sucesso',
-      error: 'Falha ao criar'
+    await toast.promise(api.post('categories', categoryDataFormData), {
+      pending: 'Adicionando nova categoria...',
+      success: 'adicionada com sucesso',
+      error: 'Falha ao aidiconar categoria. Tente novamente!'
     })
-
-    setTimeout(() => {
-      push('/listar-produtos')
-    }, 2000)
   }
 
   return (
         <Container>
-          <form noValidate onSubmit={handleSubmit(onSubmit)}>
+            <form id="form" noValidate onSubmit={handleSubmit(onSubmit)}>
+                <div>
+                    <Label>Nome</Label>
+                    <Input type="text" {...register('name')} />
+                    <ErrorMessage>{errors.name?.message}</ErrorMessage>
+                </div>
+                <div>
+                    <LabelUpload>
+                        {fileName || (
+                            <>
+                                <UploadFileIcon
 
-        <div>
-         <Label>Nome</Label>
-         <Input type='text' {...register('name')} />
-         <ErrorMessage>{errors.name?.message}</ErrorMessage>
-         </div>
+                                />
+                                Carregue uma imagem
+                            </>
+                        )}
+                        <input
+                            type="file"
+                            accept="image/png, image/jpeg"
+                            {...register('file')}
+                            onChange={value => {
+                              setFileName(value.target.files[0]?.name)
+                            }}
+                        />
+                    </LabelUpload>
+                    <ErrorMessage>{errors.file?.message}</ErrorMessage>
+                </div>
 
-         <ButtonStyles>Adicionar Categoria</ButtonStyles>
-      </form>
-  </Container>
+                <ButtonStyles>Adicionar</ButtonStyles>
+            </form>
+        </Container>
   )
 }
 

@@ -78,7 +78,7 @@ export function Login () {
       <Input type='password' {...register('password')} error={errors.password?.message}/>
       <ErrorMessage>{errors.password?.message}</ErrorMessage>
 
-      <Button type="submit" style={{ marginTop: '12%', marginBottom: '7%' }} >Entrar</Button>
+      <Button type="submit" >Entrar</Button>
       </form>
 
       <SignInLink> Não possui conta? <Link style={{ color: 'white' }} to='/cadastro'>Cadastre-se</Link></SignInLink>

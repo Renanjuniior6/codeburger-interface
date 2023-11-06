@@ -14,12 +14,23 @@ div {
     flex-direction: column;
     justify-content: space-between;
 }
+
+button {
+    @media screen and (max-width: 600px) {
+        width: 12rem;
+    }
+    
+}
 `
 export const ProductName = styled.p`
 font-size: 1.2rem;
 line-height: 19px;
-
 color: #000000;
+
+@media screen and (max-width: 600px) {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
 `
 
 export const ProductPrice = styled.p`
@@ -35,4 +46,8 @@ export const Img = styled.img`
 width: 150px;
 height: 150px;
 border-radius: 10px;
+
+@media screen and (max-width: 600px) {
+    width: 8rem;
+}
 `

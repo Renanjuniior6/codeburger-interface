@@ -7,12 +7,16 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 35px;
-padding: 35px 0;
+padding: 20px 0 35px 0;
 
 .rec.rec-arrow {
     background-color: #9758a6;
     color: #efefef;
-    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25))
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
 }
 .rec.rec-arrow:hover {
     border: 2px solid #9758a6;
@@ -26,9 +30,17 @@ padding: 35px 0;
 }
 `
 
-export const CategoryImg = styled.img`
+export const CategoryH1 = styled.h1`
+font-size: 65px;
+line-height: 87px;
+font-weight: 700;
+color: #9758a6;
 
+@media screen and (max-width: 600px) {
+    font-size: 3rem;
+}
 `
+
 export const ContainerItems = styled.div`
 display: flex;
 flex-direction: column;
@@ -37,6 +49,12 @@ export const Image = styled.img`
 width: 200px;
 height: 200px;
 border-radius: 10px;
+
+@media screen and (max-width: 600px) {
+width: 154px;
+height: 184px;
+}
+
 `
 export const Button = styled(Link)`
 margin-top: 16px;

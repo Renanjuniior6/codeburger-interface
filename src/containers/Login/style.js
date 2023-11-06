@@ -14,6 +14,10 @@ align-items: center;
 
 export const LoginImage = styled.img`
 height: 87%;
+
+@media screen and (max-width: 600px) {
+    display: none;
+}
 `
 
 export const ContainerItems = styled.div`
@@ -37,10 +41,32 @@ h1 {
     color: #ffffff;
     text-align: center;
     margin-top: 10%;
+
+    @media screen and (max-width: 600px) {
+       font-size: 1.7rem;
+    }
 }
 
 img {
     height: 18%;
+}
+
+button {
+    margin-top: 12%;
+    margin-bottom: 7%;
+
+    @media screen and (max-width: 600px) {
+    margin-left: 3%;
+    margin-bottom: 11%;
+    font-size: 1.2rem;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+    padding: 0 1%;
+    height: 86%;
+    border-radius: 15px;
 }
 `
 
@@ -51,6 +77,12 @@ line-height: 14px;
 color: #ffffff;
 margin-top: 5%;
 margin-bottom: 5px;
+
+@media screen and (max-width: 600px) {
+    margin-left: 3%;
+    font-size: 1.2rem;
+    margin-bottom: 3%;
+}
 `
 
 export const Input = styled.input`
@@ -61,6 +93,13 @@ box-shadow: 3px 3px 10px rgba(74, 144, 226, 0.19);
 border-radius: 5px;
 border: ${props => props.error ? '2px solid #cc1717' : 'none'};
 padding-left: 10px;
+
+@media screen and (max-width: 600px) {
+    width: 94%;
+    margin-left: 3%;
+    height: 42px;
+    font-size: 1.1rem;
+}
 `
 
 export const SignInLink = styled.p`
@@ -72,6 +111,11 @@ font-weight: 300;
 a {
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    margin-left: 3%;
+    font-size: 1.1rem;
 }
 
 `

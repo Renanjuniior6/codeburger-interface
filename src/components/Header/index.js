@@ -22,7 +22,7 @@ export function Header () {
               Home
             </PageLink>
             <PageLink onClick={() => push('/produtos')} isActive={pathname.includes('produtos')}>
-              Ver produtos
+              Produtos
             </PageLink>
           </ContainerLeft>
 

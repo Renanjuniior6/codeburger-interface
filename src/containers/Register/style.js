@@ -14,6 +14,10 @@ align-items: center;
 
 export const RegisterImage = styled.img`
 height: 87%;
+
+@media screen and (max-width: 600px) {
+    display: none;
+}
 `
 
 export const ContainerItems = styled.div`
@@ -37,10 +41,34 @@ h1 {
     color: #ffffff;
     text-align: center;
     margin-top: 1%;
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.7rem;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
 }
 
 img {
     height: 96px;
+}
+
+button {
+    margin-top: 7%;
+    margin-bottom: 4%;
+
+    @media screen and (max-width: 600px) {
+    margin-left: 1%;
+    margin-top: 11%;
+    margin-bottom: 11%;
+    font-size: 1.2rem;
+}
+}
+
+@media screen and (max-width: 600px) {
+    width: 97%;
+    height: 86%;
+    border-radius: 15px;
 }
 `
 
@@ -51,6 +79,12 @@ line-height: 14px;
 color: #ffffff;
 margin-top:  ${props => props.error ? '2%' : '5%'};
 margin-bottom: 5px;
+
+@media screen and (max-width: 600px) {
+    margin-left: 1%;
+    font-size: 1.2rem;
+    margin-bottom: 3%;
+}
 `
 
 export const Input = styled.input`
@@ -61,6 +95,13 @@ box-shadow: 3px 3px 10px rgba(74, 144, 226, 0.19);
 border-radius: 5px;
 border: ${props => props.error ? '2px solid #cc1717' : 'none'};
 padding-left: 10px;
+
+@media screen and (max-width: 600px) {
+    width: 98%;
+    margin-left: 1%;
+    height: 42px;
+    font-size: 1.1rem;
+}
 `
 
 export const SignInLink = styled.p`
@@ -74,4 +115,8 @@ a {
     cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+    margin-left: 1%;
+    font-size: 1.1rem;
+}
 `

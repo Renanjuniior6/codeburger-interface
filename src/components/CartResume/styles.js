@@ -24,26 +24,42 @@ grid-template-areas:
     grid-area: title;
     margin-bottom: 20px;
     font-weight: 500;
+
+    @media screen and (max-width: 600px) {
+        text-align: center;
+    }
 }
 
 .items {
     grid-area: items;
 
+    @media screen and (max-width: 600px) {
+        font-size: 1.4rem;
+    }
 }
 
 .items-price {
     grid-area: items-price;
 
+    @media screen and (max-width: 600px) {
+        font-size: 1.2rem;
+    }
 }
 
 .delivery-tax {
     grid-area: delivery-tax;
     
+    @media screen and (max-width: 600px) {
+        font-size: 1.4rem;
+    }
 }
 
 .delivery-tax-price {
     grid-area: delivery-tax-price;
-   
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.2rem;
+    }
 }
 
 }
@@ -54,6 +70,15 @@ flex-direction: row;
 justify-content: space-between;
 font-size: 24px;
 margin-top: 120px;
+
+@media screen and (max-width: 600px) {
+    font-size: 1.8rem;
+}
+}
+
+@media screen and (max-width: 600px) {
+    width: 98%;
+    
 }
 `
 
@@ -61,4 +86,10 @@ export const ButtonStyles = styled(Button)`
 width: 100%;
 margin-top: 30px;
 height: 54px;
+
+@media screen and (max-width: 600px) {
+    font-size: 1.4rem;
+    width: 97%;
+
+}
 `
