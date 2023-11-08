@@ -82,8 +82,9 @@ p {
         }
 
         @media screen and (max-width: 390px) {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }
+
     }
 
 .quantity-container {
