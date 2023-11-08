@@ -52,7 +52,7 @@ padding-bottom: 30px;
 
 @media screen and (max-width: 600px) {
 p{
-    width: 55%;
+    width: 61%;
     margin-left: auto;
     margin-right: auto;
 }

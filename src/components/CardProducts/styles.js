@@ -20,6 +20,9 @@ button {
         width: 12rem;
     }
     
+    @media screen and (max-width: 375px) {
+        width: 11rem;
+    }
 }
 `
 export const ProductName = styled.p`
@@ -49,5 +52,10 @@ border-radius: 10px;
 
 @media screen and (max-width: 600px) {
     width: 8rem;
+}
+
+@media screen and (max-width: 375px) {
+    width: 7rem;
+    height: 8rem;
 }
 `

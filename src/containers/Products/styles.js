@@ -53,4 +53,8 @@ margin-top: 20px;
     gap: 10px;
     
 }
+
+@media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+}
 `

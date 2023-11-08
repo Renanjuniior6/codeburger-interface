@@ -55,8 +55,6 @@ function NewProduct () {
     setTimeout(() => {
       push('/listar-produtos')
     }, 2000)
-
-    console.log(productDataFormData)
   }
 
   useEffect(() => {

@@ -47,7 +47,10 @@ export function CartItems () {
       : (
         <BoxEmpty>
         <EmptyCart>Carrinho vazio</EmptyCart>
-        <AddShoppingCartIcon style={{ height: 118, width: 110, cursor: 'pointer' }} onClick={() => push('/produtos')}/>
+        <AddShoppingCartIcon
+        style={{ height: 118, width: 110, cursor: 'pointer' }}
+        onClick={() => push('/produtos')}
+        />
         </BoxEmpty>
         )
   }

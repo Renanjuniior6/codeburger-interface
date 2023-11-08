@@ -8,17 +8,17 @@ export function Contact () {
           <ContainerItems>
           <Info>
           <Topic>Endereço:</Topic>
-          <P>Rua Professor Souza Moreira, 20, Rua A casa 7</P>
+          <P>Rua Marinho Lemos, 33 - Rio de Janeiro</P>
           </Info>
 
           <Info>
             <Topic>Número de Contato:</Topic>
-            <P>+55 (21) 965036374</P>
+            <P>+55 (23) 98888999</P>
           </Info>
 
           <Info>
             <Topic>Email:</Topic>
-            <P>renanjrr679@gmail.com</P>
+            <P>codeburger79@gmail.com</P>
           </Info>
 
           <Info>

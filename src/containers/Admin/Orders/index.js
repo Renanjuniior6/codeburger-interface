@@ -19,8 +19,6 @@ function Orders () {
   const [activeStatus, setActiveStatus] = useState(1)
   const [rows, setRows] = useState([])
 
-  console.log(orders)
-
   useEffect(() => {
     async function loadOrders () {
       const { data } = await api.get('orders')
@@ -59,8 +57,6 @@ function Orders () {
       setFilteredOrders(newFilteredOrders)
     }
   }, [orders])
-
-  console.log(rows)
 
   function handleStatus (status) {
     if (status.id === 1) {

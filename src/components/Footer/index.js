@@ -11,7 +11,7 @@ export function Footer () {
     <>
         <Container>
          <Img src={LogoImg}/>
-         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies adipiscing nunc dolor.</P>
+         <P>Este é apenas um projeto-piloto de uma hamburgueria fictícia com fins de aprendizado. Nenhuma das informações deste site são reais.</P>
          <ContainerIcons>
          <LinkStyle href='https://www.instagram.com/renan_jrrrr/' target='blank_'><InstagramIcon style={{ height: 40, width: 40 }}/></LinkStyle>
          <LinkStyle href='https://www.facebook.com/profile.php?id=100011666990202' target='blank_'><FacebookIcon style={{ height: 40, width: 40 }}/></LinkStyle>

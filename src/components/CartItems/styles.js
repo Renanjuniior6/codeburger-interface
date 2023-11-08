@@ -47,6 +47,11 @@ img {
         height: 139px;  
         margin-right: 1rem;
     }
+
+    @media screen and (max-width: 375px) {
+        width: 8rem;
+        height: 9rem;
+    }
 }
 
 p {
@@ -70,6 +75,10 @@ p {
             font-size: 1.5rem;
             font-weight: 500;
             width: 100%;
+        }
+
+        @media screen and (max-width: 375px) {
+            font-size: 1.3rem;
         }
     }
 
