@@ -77,11 +77,15 @@ p {
             width: 100%;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 400px) {
             font-size: 1.3rem;
         }
 
         @media screen and (max-width: 390px) {
+            font-size: 1.3rem;
+        }
+
+        @media screen and (max-width: 375px) {
             font-size: 1.3rem;
         }
 
