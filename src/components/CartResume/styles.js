@@ -90,7 +90,7 @@ height: 54px;
 
 @media screen and (max-width: 600px) {
     font-size: 1.3rem;
-    margin-left: 2%;
+    margin-left: 3%;
     width: 92%;
     height: 3rem;
 
