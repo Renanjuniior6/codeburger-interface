@@ -47,6 +47,10 @@ padding: 40px;
 justify-items: center;
 margin-top: 20px;
 
+@media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 @media screen and (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
     padding: 2%;
@@ -54,7 +58,5 @@ margin-top: 20px;
     
 }
 
-@media screen and (max-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
-}
+
 `
