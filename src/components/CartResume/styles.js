@@ -72,12 +72,13 @@ font-size: 24px;
 margin-top: 120px;
 
 @media screen and (max-width: 600px) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 }
 
 @media screen and (max-width: 600px) {
-    width: 98%;
+    width: 95%;
+    margin-left: 2%;
     
 }
 `
@@ -88,8 +89,10 @@ margin-top: 30px;
 height: 54px;
 
 @media screen and (max-width: 600px) {
-    font-size: 1.4rem;
-    width: 97%;
+    font-size: 1.3rem;
+    margin-left: 2%;
+    width: 92%;
+    height: 3rem;
 
 }
 `
