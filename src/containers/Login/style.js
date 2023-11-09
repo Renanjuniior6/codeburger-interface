@@ -62,11 +62,13 @@ button {
     @media screen and (max-width: 600px) {
         font-size: 1.1rem;
         margin-bottom: 14%;
+        margin-left: 3%;
     }
 
     @media screen and (max-width: 375px) {
         font-size: 1.1rem;
         height: 2rem;
+        margin-left: 3%;
     }
 
 }
