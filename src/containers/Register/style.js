@@ -13,7 +13,7 @@ align-items: center;
 `
 
 export const RegisterImage = styled.img`
-height: 87%;
+height: 92%;
 
 @media screen and (max-width: 600px) {
     display: none;
@@ -23,7 +23,7 @@ height: 87%;
 export const ContainerItems = styled.div`
 background: #373737;
 border-radius: 0 10px 10px 0;
-height: 87%;
+height: 92%;
 padding: 0 4%;
 display: flex;
 flex-direction: column;
@@ -48,6 +48,14 @@ h1 {
         margin-bottom: 5%;
     }
 
+    @media screen and (max-width: 414px) {
+        font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: 412px) {
+    font-size: 1.4rem;
+    }
+
     @media screen and (max-width: 375px) {
         margin-top: 0%;
     }
@@ -55,15 +63,24 @@ h1 {
 }
 
 img {
-    height: 96px;
+    height: 13%;
 
     @media screen and (max-width: 600px) {
-        height: 5rem;
+        height: 10%;
+    }
+
+    @media screen and (max-width: 414px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 412px) {
+        display: block;
+        height: 10%;
     }
 
     @media screen and (max-width: 375px) {
     display: none;
-}
+    }
 
 }
 
@@ -78,11 +95,21 @@ button {
     font-size: 1.2rem;
 }
 
-@media screen and (max-width: 375px) {
-    font-size: 1.1rem;
-    margin-bottom: 12%;
+@media screen and (max-width: 414px) {
+    margin-top: 6%;
+    margin-bottom: 11%;
 }
 
+@media screen and (max-width: 412px) {
+    margin-top: 13%;
+    margin-bottom: 17%;
+}
+
+@media screen and (max-width: 375px) {
+    font-size: 1rem;
+    height: 1.9rem;
+    margin-bottom: 11%;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -106,11 +133,23 @@ margin-bottom: 5px;
     font-size: 1.2rem;
     margin-bottom: 3%;
 }
+
+@media screen and (max-width: 414px) {
+   font-size: 1rem;
+}
+
+@media screen and (max-width: 412px) {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 375px) {
+    font-size: 0.9rem;
+}
 `
 
 export const Input = styled.input`
-width: 391.42px;
-height: 38.32px;
+width: 24rem;
+height: 2rem;
 background: #ffffff;
 box-shadow: 3px 3px 10px rgba(74, 144, 226, 0.19);
 border-radius: 5px;
@@ -120,12 +159,12 @@ padding-left: 10px;
 @media screen and (max-width: 600px) {
     width: 98%;
     margin-left: 1%;
-    height: 2.3rem;
+    height: 2.1rem;
     font-size: 1.1rem;
 }
 
 @media screen and (max-width: 375px) {
-    height: 1.9rem;
+    height: 1.8rem;
 }
 `
 
@@ -143,5 +182,17 @@ a {
 @media screen and (max-width: 600px) {
     margin-left: 1%;
     font-size: 1.1rem;
+}
+
+@media screen and (max-width: 414px) {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 412px) {
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 375px) {
+    font-size: 0.9rem;
 }
 `

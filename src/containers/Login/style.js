@@ -13,7 +13,7 @@ align-items: center;
 `
 
 export const LoginImage = styled.img`
-height: 87%;
+height: 92%;
 
 @media screen and (max-width: 600px) {
     display: none;
@@ -23,7 +23,7 @@ height: 87%;
 export const ContainerItems = styled.div`
 background: #373737;
 border-radius: 0 10px 10px 0;
-height: 87%;
+height: 92%;
 padding: 0 4%;
 display: flex;
 flex-direction: column;
@@ -43,16 +43,16 @@ h1 {
     margin-top: 10%;
 
     @media screen and (max-width: 600px) {
-       font-size: 1.7rem;
+       font-size: 1.5rem;
     }
 
-    @media screen and (max-width: 600px) {
-       font-size: 1.5rem;
+    @media screen and (max-width: 375px) {
+        font-size: 1.4rem;
     }
 }
 
 img {
-    height: 18%;
+    height: 16%;
 }
 
 button {
@@ -60,16 +60,14 @@ button {
     margin-bottom: 7%;
 
     @media screen and (max-width: 600px) {
-    margin-left: 3%;
-    margin-bottom: 17%;
-    font-size: 1.2rem;
-}
+        font-size: 1.1rem;
+        margin-bottom: 14%;
+    }
 
-@media screen and (max-width: 600px) {
-    font-size: 1.1rem;
-    margin-bottom: 14%;
-}
-
+    @media screen and (max-width: 375px) {
+        font-size: 1.1rem;
+        height: 2rem;
+    }
 
 }
 
@@ -95,11 +93,15 @@ margin-bottom: 5px;
     font-size: 1.2rem;
     margin-bottom: 3%;
 }
+
+@media screen and (max-width: 375px) {
+    font-size: 1rem;
+}
 `
 
 export const Input = styled.input`
-width: 391.42px;
-height: 38.32px;
+width: 24rem;
+height: 2rem;
 background: #ffffff;
 box-shadow: 3px 3px 10px rgba(74, 144, 226, 0.19);
 border-radius: 5px;
@@ -114,7 +116,7 @@ padding-left: 10px;
 }
 
 @media screen and (max-width: 375px) {
-    height: 2rem;
+    height: 1.8rem;
 }
 `
 
@@ -131,7 +133,11 @@ a {
 
 @media screen and (max-width: 600px) {
     margin-left: 3%;
-    font-size: 1.1rem;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+    font-size: 0.9rem;
 }
 
 `
