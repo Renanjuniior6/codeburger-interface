@@ -43,27 +43,28 @@ h1 {
     margin-top: 1%;
 
     @media screen and (max-width: 600px) {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         margin-top: 5%;
         margin-bottom: 5%;
     }
 
-    @media screen and (max-width: 414px) {
-        font-size: 1.4rem;
+    @media screen and (max-width: 375px) {
+        margin-top: 0%;
     }
+
 }
 
 img {
     height: 96px;
 
     @media screen and (max-width: 600px) {
-        height: 6rem;
+        height: 5rem;
     }
 
-    
-    @media screen and (max-width: 414px) {
-        height: 4rem;
-    }
+    @media screen and (max-width: 375px) {
+    display: none;
+}
+
 }
 
 button {
@@ -72,14 +73,16 @@ button {
 
     @media screen and (max-width: 600px) {
     margin-left: 1%;
-    margin-top: 11%;
+    margin-top: 13%;
     margin-bottom: 17%;
     font-size: 1.2rem;
 }
 
-    @media screen and (max-width: 414px) {
-        margin-bottom: 13%;
-    }
+@media screen and (max-width: 375px) {
+    font-size: 1.1rem;
+    margin-bottom: 12%;
+}
+
 }
 
 @media screen and (max-width: 600px) {
@@ -88,9 +91,6 @@ button {
     border-radius: 15px;
 }
 
-@media screen and (max-width: 414px) {
-    height: 96%;
-}
 `
 
 export const Label = styled.p`
@@ -124,8 +124,8 @@ padding-left: 10px;
     font-size: 1.1rem;
 }
 
-@media screen and (max-width: 414px) {
-    height: 2.3rem;
+@media screen and (max-width: 375px) {
+    height: 1.9rem;
 }
 `
 

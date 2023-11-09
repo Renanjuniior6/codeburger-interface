@@ -45,6 +45,10 @@ h1 {
     @media screen and (max-width: 600px) {
        font-size: 1.7rem;
     }
+
+    @media screen and (max-width: 600px) {
+       font-size: 1.5rem;
+    }
 }
 
 img {
@@ -57,22 +61,25 @@ button {
 
     @media screen and (max-width: 600px) {
     margin-left: 3%;
-    margin-bottom: 11%;
+    margin-bottom: 17%;
     font-size: 1.2rem;
 }
+
+@media screen and (max-width: 600px) {
+    font-size: 1.1rem;
+    margin-bottom: 14%;
+}
+
 
 }
 
 @media screen and (max-width: 600px) {
     padding: 0 1%;
     height: 86%;
-    width: 93%;
+    width: 96%;
     border-radius: 15px;
 }
 
-@media screen and (max-width: 414px) {
-    height: 86%;
-}
 `
 
 export const Label = styled.p`
@@ -102,8 +109,12 @@ padding-left: 10px;
 @media screen and (max-width: 600px) {
     width: 94%;
     margin-left: 3%;
-    height: 42px;
+    height: 2.4rem;
     font-size: 1.1rem;
+}
+
+@media screen and (max-width: 375px) {
+    height: 2rem;
 }
 `
 
