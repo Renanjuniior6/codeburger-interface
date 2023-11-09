@@ -111,7 +111,7 @@ padding-left: 10px;
 @media screen and (max-width: 600px) {
     width: 94%;
     margin-left: 3%;
-    height: 2.4rem;
+    height: 2.3rem;
     font-size: 1.1rem;
 }
 
