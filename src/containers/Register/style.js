@@ -47,10 +47,23 @@ h1 {
         margin-top: 5%;
         margin-bottom: 5%;
     }
+
+    @media screen and (max-width: 414px) {
+        font-size: 1.4rem;
+    }
 }
 
 img {
     height: 96px;
+
+    @media screen and (max-width: 600px) {
+        height: 6rem;
+    }
+
+    
+    @media screen and (max-width: 414px) {
+        height: 4rem;
+    }
 }
 
 button {
@@ -60,15 +73,23 @@ button {
     @media screen and (max-width: 600px) {
     margin-left: 1%;
     margin-top: 11%;
-    margin-bottom: 11%;
+    margin-bottom: 17%;
     font-size: 1.2rem;
 }
+
+    @media screen and (max-width: 414px) {
+        margin-bottom: 13%;
+    }
 }
 
 @media screen and (max-width: 600px) {
     width: 97%;
     height: 86%;
     border-radius: 15px;
+}
+
+@media screen and (max-width: 414px) {
+    height: 96%;
 }
 `
 
@@ -99,8 +120,12 @@ padding-left: 10px;
 @media screen and (max-width: 600px) {
     width: 98%;
     margin-left: 1%;
-    height: 42px;
+    height: 2.3rem;
     font-size: 1.1rem;
+}
+
+@media screen and (max-width: 414px) {
+    height: 2.3rem;
 }
 `
 

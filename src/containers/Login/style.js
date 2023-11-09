@@ -66,7 +66,12 @@ button {
 @media screen and (max-width: 600px) {
     padding: 0 1%;
     height: 86%;
+    width: 93%;
     border-radius: 15px;
+}
+
+@media screen and (max-width: 414px) {
+    height: 86%;
 }
 `
 
