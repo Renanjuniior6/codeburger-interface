@@ -30,7 +30,7 @@ export function Contact () {
 
           <Form action="https://formsubmit.co/renanjrr679@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false"/>
-            <input type="hidden" name="_next" value="https://screen-thanks.netlify.app/"/>
+            <input type="hidden" name="_next" value="https://thanks-screen.netlify.app/"/>
             <Input type='name' name='name' placeholder='Digite seu nome' required/>
             <Input type='email' name='email'placeholder='Digite seu Email' required/>
 
