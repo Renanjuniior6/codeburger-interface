@@ -4,7 +4,7 @@
 Possibilidade de login e cadastro, armazenamento dos dados do usuário para melhor experiência, páginas com produtos e opção de adicioná-los ao carrinho, navegar entre as categorias e
 realizar o pedido. Tela do admin com opções de ver os pedidos realizados, alterar o seu estados, ver produtos em estoque, criação de um novo produto e categoria
 
-<img src='https://media.licdn.com/dms/image/D4D2DAQHCRhNnta0zdw/profile-treasury-image-shrink_1280_1280/0/1700658393459?e=1706191200&v=beta&t=UWobbQfZX52fQ7yndVIJVOsjMZnt4nzeoTso3Wsv7jc' />
+![captura do codeburger](https://github.com/Renanjuniior6/codeburger-interface/assets/106713211/a37b47df-188f-4889-ae91-4a773974fb25)
 
 Principais funcionalidades da página:
 <br/>
