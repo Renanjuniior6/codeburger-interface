@@ -1,17 +1,17 @@
-import PropTypes from 'prop-types'
-import React from 'react'
+import PropTypes from "prop-types"
+import React from "react"
 
-import { CartProvider } from './CartContext'
-import { UserProvider } from './UserContext'
+import { CartProvider } from "./CartContext"
+import { UserProvider } from "./UserContext"
 
 const AppProvider = ({ children }) => (
-    <CartProvider>
+  <CartProvider>
     <UserProvider>{children}</UserProvider>
-    </CartProvider>
+  </CartProvider>
 )
 
 AppProvider.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 }
 
 export default AppProvider

@@ -1,14 +1,12 @@
-import PropTypes from 'prop-types'
-import React from 'react'
+import PropTypes from "prop-types"
+import React from "react"
 
-import { ErrorMessageStyles } from './styles'
+import { ErrorMessageStyles } from "./styles"
 
-export function ErrorMessage ({ children }) {
-  return (
-       <ErrorMessageStyles>{children}</ErrorMessageStyles>
-  )
+export function ErrorMessage({ children }) {
+  return <ErrorMessageStyles>{children}</ErrorMessageStyles>
 }
 
 ErrorMessage.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.string,
 }

@@ -1,35 +1,35 @@
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
-import PostAddIcon from '@mui/icons-material/PostAdd'
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart"
+import PostAddIcon from "@mui/icons-material/PostAdd"
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag"
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 
-import paths from '../../constants/paths'
+import paths from "../../constants/paths"
 
 const listLinks = [
   {
     id: 1,
-    label: 'Pedidos',
+    label: "Pedidos",
     link: paths.Order,
-    icon: ShoppingBagIcon
+    icon: ShoppingBagIcon,
   },
   {
     id: 2,
-    label: 'Produtos',
+    label: "Produtos",
     link: paths.Products,
-    icon: ShoppingCartIcon
+    icon: ShoppingCartIcon,
   },
   {
     id: 3,
-    label: 'Novo Produto',
+    label: "Novo Produto",
     link: paths.NewProduct,
-    icon: AddShoppingCartIcon
+    icon: AddShoppingCartIcon,
   },
   {
     id: 4,
-    label: 'Nova Categoria',
+    label: "Nova Categoria",
     link: paths.NewCategory,
-    icon: PostAddIcon
-  }
+    icon: PostAddIcon,
+  },
 ]
 
 export default listLinks

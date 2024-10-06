@@ -1,19 +1,19 @@
-import React from 'react'
+import React from "react"
 
-import CartLogo from '../../assets/home-image-3.svg'
-import { CartItems, CartResume, OffersCarousel, Footer } from '../../components'
-import { Container, CartImg, Wrapper } from './styles'
+import CartLogo from "../../assets/home-image-3.svg"
+import { CartItems, CartResume, OffersCarousel, Footer } from "../../components"
+import { Container, CartImg, Wrapper } from "./styles"
 
-export function Cart () {
+export function Cart() {
   return (
-        <Container>
-           <CartImg src= {CartLogo} alt='logo do carrinho'/>
-           <Wrapper>
-           <CartItems />
-           <CartResume />
-           </Wrapper>
-           <OffersCarousel />
-           <Footer />
-        </Container>
+    <Container>
+      <CartImg src={CartLogo} alt="logo do carrinho" />
+      <Wrapper>
+        <CartItems />
+        <CartResume />
+      </Wrapper>
+      <OffersCarousel />
+      <Footer />
+    </Container>
   )
 }
