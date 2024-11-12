@@ -56,6 +56,7 @@
 ![Captura da Web_18-1-2024_111641_codeburger-interface-xi vercel app](https://github.com/Renanjuniior6/codeburger-interface/assets/106713211/596282db-a1e3-4590-87d2-4f28078f8d31)
 
 ## 📲 [Link Demonstração](https://codeburger-interface-xi.vercel.app/)
+## 📲 [Vídeo Demonstração](https://www.linkedin.com/feed/update/urn:li:activity:7128471344647725056/)
 
 ## 💻 Como rodar 
 ```bash
