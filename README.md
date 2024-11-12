@@ -90,4 +90,5 @@ $ yarn start
 ## ❗ Observações 
 - Como se trata de um projeto fullstack, para rodar corretamente na sua máquina será necessário fazer o clone e rodar a parte back end
 - [Repositório da API](https://github.com/Renanjuniior6/CodeBurger-Backend)
+- Banco de dados se encontra fora do ar no momento!
 
