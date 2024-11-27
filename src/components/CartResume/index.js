@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { useHistory } from "react-router-dom"
 import { toast } from "react-toastify"
 
 import { useCart } from "../../hooks/CartContext"
@@ -12,6 +13,8 @@ export function CartResume() {
 
   const { cartProducts } = useCart()
 
+  const { push } = useHistory()
+
   useEffect(() => {
     const sumAllItems = cartProducts.reduce((acc, current) => {
       return current.price * current.quantity + acc
@@ -21,15 +24,21 @@ export function CartResume() {
   }, [cartProducts, deliveryTax])
 
   const submitOrder = async () => {
-    const order = cartProducts.map((product) => {
-      return { id: product.id, quantity: product.quantity }
+    const products = cartProducts.map((product) => {
+      return {
+        id: product.id,
+        quantity: product.quantity,
+        price: product.price,
+      }
     })
 
-    await toast.promise(api.post("orders", { products: order }), {
-      pending: "Realizando seu pedido...",
-      success: "Pedido realizado com sucesso",
-      error: "Falha ao realizar pedido, tente novamente",
-    })
+    try {
+      const { data } = await api.post("/create-payment-intent", { products })
+
+      push("/checkout", { data })
+    } catch (err) {
+      toast.error("Erro, tente novamente!")
+    }
   }
 
   return (
